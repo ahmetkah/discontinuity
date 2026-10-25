@@ -1,0 +1,1 @@
+Bu projeyi AGENTS.md'ye göre incele. En önemli 3 bulguyu önem sırasıyla yaz; her biri için neden önemli olduğunu bir cümleyle açıkla. Kod değiştirme.

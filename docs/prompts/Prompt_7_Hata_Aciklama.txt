@@ -1,0 +1,3 @@
+Ders Ekle ekranında saat alanını boş bırakıp Kaydet'e bastım, hiçbir şey olmadı. Debug Console'daki hata şu:
+[hatanın ilk 3-4 satırını buraya yapıştır]
+Henüz kod değiştirme. Hatanın nedenini ve hangi dosyanın hangi satırında oluştuğunu kısaca açıkla.

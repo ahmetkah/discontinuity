@@ -1,0 +1,35 @@
+Bir üniversite öğrencisinin ders devamsızlığını takip ettiği basit bir mobil uygulama için 3 ekranlık tasarım hazırla. Bu tasarım canlı bir eğitimde Flutter ile kodlanacak ve bir AI kod ajanına referans görsel olarak verilecek. Bu yüzden sade olmalı ve Flutter'ın standart Material 3 bileşenleriyle birebir yapılabilmeli.
+
+Format: Android telefon ölçüsünde, açık tema. Üç ekranı aynı boyutta telefon çerçevelerinde yan yana göster, her birinin üstüne ekran adını yaz. Tüm metinler Türkçe.
+
+İş kuralı: Dönem 14 hafta. Devamsızlık hakkı = haftalık saat × 14 × 0,3, aşağı yuvarlanır (2 saat → 8, 3 saat → 12, 4 saat → 16).
+
+Durumlar (renk tek başına anlam taşımasın, her durumda yazı da olsun):
+- Normal: kullanılan saat hakkın yarısından az → yeşil, "Kalan hak: X saat"
+- Dikkat: hakkın yarısı veya fazlası kullanıldı → turuncu, "Dikkat: X saat kaldı"
+- Doldu: hakkın tamamı kullanıldı → kırmızı, "Devamsızlık hakkın doldu!"
+
+EKRAN 1 – Ders Listesi
+- AppBar başlığı: "Devamsızlık"
+- Her ders bir Card: ders adı, "Haftalık X saat", büyük yazıyla "kullanılan / hak" (ör. 4 / 8), durum satırı, ince bir ilerleme çubuğu, sağda −1 ve +1 butonları.
+- Üç örnek ders:
+  • Veri Tabanı Yönetimi · haftalık 3 saat · 2 / 12 · normal
+  • İstatistik · haftalık 2 saat · 4 / 8 · dikkat
+  • Yönetim Bilişim Sistemleri · haftalık 4 saat · 16 / 16 · doldu
+- Sağ altta genişletilmiş FAB: "+ Ders ekle"
+
+EKRAN 2 – Ders Ekle
+- AppBar: geri oku ve "Ders Ekle"
+- İki alan: "Ders adı" (dolu: Pazarlama) ve "Haftalık saat" (sayısal).
+- "Haftalık saat" alanını hata durumunda göster; altında kırmızı "Geçerli bir saat gir (1–20)" yazısı olsun.
+- Altta tam genişlikte "Kaydet" butonu.
+
+EKRAN 3 – Ders Detayı (sonraki sürüm hedefi)
+- AppBar: geri oku ve "İstatistik"
+- Ortada büyük dairesel ilerleme göstergesi: 4 / 8, altında "Dikkat: 4 saat kaldı"
+- Bilgi satırları: Haftalık saat 2 · Dönem 14 hafta · Devamsızlık hakkı 8 saat
+
+Kısıtlar:
+- Yalnızca şu bileşenler: AppBar, Card, ListView, FloatingActionButton.extended, TextFormField, FilledButton, IconButton, LinearProgressIndicator, CircularProgressIndicator.
+- Varsayılan Roboto yazı tipi, tek bir ana renk ve yukarıdaki üç durum rengi.
+- Gradient, illüstrasyon, özel ikon, alt menü, arama, giriş ekranı, grafik veya ayarlar ekleme. Burada yazmayan hiçbir özellik ekleme.

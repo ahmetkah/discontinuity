@@ -1,0 +1,5 @@
+Hedef: Ders veri modelini ve Ders Listesi ekranını yap.
+Context: AGENTS.md'deki iş kuralı geçerli. Başlangıçta 3 örnek ders olsun: Veri Tabanı Yönetimi (haftalık 3 saat, 2 saat kullanılmış), İstatistik (haftalık 2 saat, 4 saat kullanılmış), Yönetim Bilişim Sistemleri (haftalık 4 saat, 16 saat kullanılmış).
+Kısıt: StatefulWidget ve setState kullan, paket ekleme. Her kartta ders adı, "kullanılan / hak" ve +1, −1 butonları olsun. Durum rengini AGENTS.md'deki kurala göre göster.
+Dışında: Bu adımda ders ekleme ekranı yok.
+Kabul: Bitince nasıl test edeceğimi madde madde yaz.

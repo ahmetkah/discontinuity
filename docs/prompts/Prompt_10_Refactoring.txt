@@ -1,0 +1,1 @@
+Davranışı değiştirmeden refactoring yap: ders kartını ayrı bir dosyada CourseCard adlı bir widget'a taşı ve modeldeki durum hesabını okunur hale getir. Yeni paket veya katman ekleme. Bitince flutter analyze çalıştır.

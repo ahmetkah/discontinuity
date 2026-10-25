@@ -1,0 +1,1 @@
+Henüz kod yazma. AGENTS.md'yi ve design/ klasöründeki screen1.png ile screen2.png görsellerini incele. MVP'yi küçük adımlara bölen bir plan çıkar: en fazla 5 adım ve her adımın sonunda uygulama çalışıyor olsun. Her adım için ne yapılacağını ve nasıl test edileceğini birer cümleyle yaz. Paket, mimari katman veya ek ekran önerme.

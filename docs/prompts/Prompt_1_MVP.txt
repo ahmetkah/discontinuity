@@ -1,0 +1,5 @@
+Henüz kod yazma ve dosya oluşturma.
+
+Problem: Üniversite öğrencileri devamsızlık hakkının bittiğini çoğu zaman iş işten geçince fark ediyor. Haftalık 5–6 dersi olan bir öğrenci için Flutter ile çalışan bir prototip yapacağız.
+
+40 dakikada geliştirilebilecek bir MVP öner: en fazla 4 özellik. Diğer fikirleri ayrı bir "Sonra" listesine yaz. Cevabın kısa olsun.

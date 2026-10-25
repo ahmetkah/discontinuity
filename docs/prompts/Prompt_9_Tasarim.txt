@@ -1,0 +1,1 @@
+design/screen1.png görselini mevcut Ders Listesi ekranıyla karşılaştır. Farkları en fazla 3 madde halinde listele, sonra yalnızca ilkini düzelt. Başka hiçbir şeyi değiştirme.

@@ -1,0 +1,5 @@
+Hedef: Ders Ekle ekranını yap. Listeye bir "+ Ders ekle" butonu ekle; bu buton ekranı Navigator.push ile açsın. Kaydet'e basınca yeni ders listeye eklensin ve Navigator.pop ile listeye dönülsün.
+Context: Formda iki alan var: Ders adı ve Haftalık saat. Yeni dersin kullanılan saati 0 ile başlar.
+Kısıt: Haftalık saati int.parse ile sayıya çevir. setState ile devam et, paket ekleme. Mevcut liste ve +1/−1 davranışı değişmesin.
+Dışında: Form doğrulaması ve hata mesajları bu adımda yok; sonraki adımda ekleyeceğiz.
+Kabul: Bitince nasıl test edeceğimi yaz.

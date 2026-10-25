@@ -1,0 +1,1 @@
+Bu Flutter projesinin yapısını yeni başlayan biri için 5 maddede açıkla: hangi klasör ne işe yarar ve uygulama nereden başlar? Hiçbir dosyayı değiştirme.

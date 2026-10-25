@@ -1,0 +1,1 @@
+Şimdi yalnızca bu dosyayı düzelt. Kaydet'e basınca form doğrulansın: ders adı boşsa "Ders adı gir", haftalık saat boşsa, sayı değilse ya da 1–20 aralığında değilse "Geçerli bir saat gir (1–20)" uyarısı alanın altında görünsün ve ders kaydedilmesin. Başka hiçbir dosyayı değiştirme. Bitince test adımlarını yaz.
