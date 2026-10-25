@@ -108,10 +108,11 @@ class DersKarti extends StatelessWidget {
   final VoidCallback onArtir;
   final VoidCallback onAzalt;
 
+  // Renkler design/screen1.png'den alındı.
   Color get _renk => switch (ders.durum) {
-    DersDurumu.normal => Colors.green.shade800,
-    DersDurumu.dikkat => Colors.orange.shade800,
-    DersDurumu.doldu => Colors.red.shade800,
+    DersDurumu.normal => const Color(0xFF2E7D32),
+    DersDurumu.dikkat => const Color(0xFFC05600),
+    DersDurumu.doldu => const Color(0xFFBA1A1A),
   };
 
   String get _durumMetni => switch (ders.durum) {
