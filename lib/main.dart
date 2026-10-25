@@ -187,6 +187,7 @@ class DersEkleEkrani extends StatefulWidget {
 }
 
 class _DersEkleEkraniState extends State<DersEkleEkrani> {
+  final _formKey = GlobalKey<FormState>();
   final _adController = TextEditingController();
   final _saatController = TextEditingController();
 
@@ -197,7 +198,21 @@ class _DersEkleEkraniState extends State<DersEkleEkrani> {
     super.dispose();
   }
 
+  String? _adDogrula(String? deger) {
+    if (deger == null || deger.trim().isEmpty) return 'Ders adı gir';
+    return null;
+  }
+
+  String? _saatDogrula(String? deger) {
+    final saat = int.tryParse(deger?.trim() ?? '');
+    if (saat == null || saat < 1 || saat > 20) {
+      return 'Geçerli bir saat gir (1–20)';
+    }
+    return null;
+  }
+
   void _kaydet() {
+    if (!_formKey.currentState!.validate()) return;
     final ders = Ders(
       ad: _adController.text.trim(),
       haftalikSaat: int.parse(_saatController.text.trim()),
@@ -212,34 +227,39 @@ class _DersEkleEkraniState extends State<DersEkleEkrani> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Column(
-            children: [
-              TextField(
-                controller: _adController,
-                textCapitalization: TextCapitalization.sentences,
-                decoration: const InputDecoration(
-                  labelText: 'Ders adı',
-                  border: OutlineInputBorder(),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                TextFormField(
+                  controller: _adController,
+                  textCapitalization: TextCapitalization.sentences,
+                  decoration: const InputDecoration(
+                    labelText: 'Ders adı',
+                    border: OutlineInputBorder(),
+                  ),
+                  validator: _adDogrula,
                 ),
-              ),
-              const SizedBox(height: 16),
-              TextField(
-                controller: _saatController,
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Haftalık saat',
-                  border: OutlineInputBorder(),
+                const SizedBox(height: 16),
+                TextFormField(
+                  controller: _saatController,
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    labelText: 'Haftalık saat',
+                    border: OutlineInputBorder(),
+                  ),
+                  validator: _saatDogrula,
                 ),
-              ),
-              const Spacer(),
-              FilledButton(
-                onPressed: _kaydet,
-                style: FilledButton.styleFrom(
-                  minimumSize: const Size.fromHeight(56),
+                const Spacer(),
+                FilledButton(
+                  onPressed: _kaydet,
+                  style: FilledButton.styleFrom(
+                    minimumSize: const Size.fromHeight(56),
+                  ),
+                  child: const Text('Kaydet'),
                 ),
-                child: const Text('Kaydet'),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
